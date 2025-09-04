@@ -1,0 +1,63 @@
+/your-app-root
+├── public/                      # Static assets (images, favicon, robots.txt, etc.)
+│
+├── src/
+│   ├── app/
+│   │   ├── layout.tsx           # Global layout (navbar/sidebar, etc.)
+│   │   ├── page.tsx             # Admin dashboard home (redirects if not authed)
+│   │   ├── login/               # Admin login page (NextAuth)
+│   │   │   └── page.tsx
+│   │   ├── admin/               # All ADMIN ROUTES under here!
+│   │   │   ├── layout.tsx       # Admin area layout (sidebar/nav/protected wrappers)
+│   │   │   ├── dashboard/       # Dashboard main view
+│   │   │   │   └── page.tsx
+│   │   │   ├── users/           # Manage users (CRUD)
+│   │   │   │   └── page.tsx
+│   │   │   ├── content/         # Manage site content/pages/blogs
+│   │   │   │   ├── page.tsx
+│   │   │   │   ├── [id]/page.tsx
+│   │   │   │   └── new/page.tsx
+│   │   │   ├── images/          # Media/images manager
+│   │   │   │   └── page.tsx
+│   │   │   ├── reports/         # View/download reports, logs, etc.
+│   │   │   │   └── page.tsx
+│   │   │   └── settings/        # General site/org/admin settings
+│   │   │       └── page.tsx
+│   │   ├── api/
+│   │   │   ├── auth/            # NextAuth.js endpoints
+│   │   │   │   └── [...nextauth]/route.ts
+│   │   │   ├── users/           # User CRUD APIs (protected)
+│   │   │   │   └── route.ts
+│   │   │   ├── content/         # Content CRUD APIs
+│   │   │   │   └── route.ts
+│   │   │   ├── images/          # Images/media APIs
+│   │   │   │   └── route.ts
+│   │   │   └── ...              # Other back-end logic/API routes
+│   │   ├── middleware.ts        # Protect /admin* routes (see below)
+│   │   └── not-found.tsx        # 404 page
+│   │
+│   ├── components/              # All UI components (forms, tables, modals, etc.)
+│   │   ├── layout/              # Sidebar, topbar, widgets
+│   │   ├── forms/               # Form elements/reusable
+│   │   ├── tables/
+│   │   ├── charts/
+│   │   └── ...                  # Other slices as needed
+│   │
+│   ├── models/                  # Mongoose data models/schemas (User, Content, etc.)
+│   ├── lib/                     # Utils (db, auth helpers, validators, uploader)
+│   │   ├── db.ts                # MongoDB connection using Mongoose
+│   │   ├── auth.ts              # Session, JWT, RBAC helpers
+│   │   ├── imageUpload.ts       # File upload helpers (S3/Cloudinary/etc)
+│   │   └── ...                  # Additional utilities
+│   │
+│   ├── hooks/                   # Custom React hooks
+│   ├── styles/                  # Tailwind/CSS
+│   ├── types/                   # TypeScript types/interfaces
+│   └── config/                  # App configs, constants, feature settings
+│
+├── .env.local                   # DO NOT COMMIT. Store secrets, DB URIs here!
+├── next.config.js
+├── tailwind.config.js
+├── tsconfig.json
+├── package.json
+└── README.md
