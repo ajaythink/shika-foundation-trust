@@ -1,4 +1,4 @@
-import HomePage from '@/app/home/page'
+import HomePage from '@/app/(users)/home/page'
 // import { ThemeProvider } from "@material-tailwind/react";
 export default function Home() {
   return (

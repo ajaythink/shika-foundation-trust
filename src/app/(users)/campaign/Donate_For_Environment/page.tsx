@@ -1,11 +1,9 @@
-"use client";
-
 import Carousel from "@/components/carousel/Carousel";
 import Image from "next/image";
-// import React, { useState } from "react";
-import DonationForm1 from "@/app/campaign/DonationForm1";
-// import { FaAngleDown, FaAngleUp } from "react-icons/fa";
-const Donate_For_Health = () => {
+
+import DonationForm1 from "@/app/(users)/campaign/DonationForm1";
+
+const Donate_For_Environment = () => {
   const mockCarouselData = [
     {
       image: "/uploads/Banner1-scaled.webp",
@@ -44,9 +42,9 @@ const Donate_For_Health = () => {
       </Carousel>
       <div>
         <div className="px-5 lg:px-20 py-10 grid md:grid-cols-2  gap-5 *:border *:rounded-lg">
-          <div className="p-5 rounded-lg shadow-lg bg-white border border-green-600 ">
+          {/* <div className="p-5 rounded-lg shadow-lg bg-white border border-green-600 ">
             <h1 className="text-3xl text-green-700 text-center pb-4">
-              Why Health Cannot Wait
+              Why Environment important
             </h1>
             <p>
               At <b> Shika Foundation Trust</b>, we believe that
@@ -93,20 +91,49 @@ const Donate_For_Health = () => {
               Health cannot wait, and neither should we. Let’s work together for
               a healthier tomorrow!
             </p>
+          </div> */}
+          <div className="p-6 bg-green-50 rounded-lg border border-green-400 shadow mb-6">
+            <h2 className="text-2xl font-bold text-green-700 mb-4 text-center">
+              पर्यावरण क्यों महत्वपूर्ण है? /{" "}
+              <span className="italic">Why Environment is Important?</span>
+            </h2>
+            <p className="text-lg leading-relaxed text-gray-800">
+              <b>पर्यावरण</b> हमें <b>शुद्ध वायु (pure air)</b>,{" "}
+              <b>स्वच्छ पानी (clean water)</b>, और <b>खाद्य पदार्थ (food)</b>{" "}
+              देता है। यदि पर्यावरण दूषित हो जाए, तो मानव जीवन, पशु-पक्षी,
+              पेड़-पौधे सभी को खतरा होता है।
+              <br />
+              <br />
+              <b>
+                Environment provides us with resources essential for our
+                survival
+              </b>{" "}
+              such as{" "}
+              <b>clean air, fresh water, fertile soil, and biodiversity</b>.
+              <br />
+              <br />
+              <b>पर्यावरण का संतुलन</b> बिगड़ने पर प्राकृतिक आपदाएँ, बिमारियाँ,
+              और जलवायु परिवर्तन जैसी समस्याएँ तेजी से बढ़ जाती हैं।
+              <br />
+              <br />
+              <b>Therefore, protecting the environment</b> is not just a
+              responsibility, but a necessity for healthy and happy life for
+              ourselves and future generations.
+            </p>
           </div>
-          <DonationForm1 />
+          {/* card */}
           {/* <div className="block sm:flex-none rounded-lg shadow-lg bg-green-50 p-5 border border-green-600">
-             
+            
             <h2 className="text-center  text-green-700 text-xl font-bold">
               SUPPORT A CAUSE
             </h2>
-            
+            <BasicTabs />
           </div> */}
+          <DonationForm1 />
         </div>
       </div>
     </>
   );
 };
 
-export default Donate_For_Health;
-
+export default Donate_For_Environment;
